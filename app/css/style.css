@@ -224,14 +224,14 @@ aside .sidebar-header {
 footer {
     width: 100%;
     float: left;
-}
-.footer-container {
-    width: 900px;
-    margin: 0 auto;
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
+}
+.footer-container {
+    width: 900px;
+    margin: 0 auto;
     background: #565659;
     padding-bottom: 5px;
 }
