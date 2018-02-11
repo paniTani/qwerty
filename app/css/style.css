@@ -98,26 +98,26 @@ a {
     color: #62c9cf;
     text-decoration: underline;
 }
-.bars{
+.bars {
     display: none;
 }
 nav {
     float: right;
 }
-#menu li {
+#sidebar li {
     float: left;
     padding: 10px 57px 10px 13px;
     font-size: 12px;
     font-family: 'Museosanscyrl500', Arial, sans-serif;
     border-bottom: 3px solid #565659;
 }
-#menu li:hover {
+#sidebar li:hover {
     border-bottom: 3px solid #62c9cf;
 }
-#menu li:hover a {
+#sidebar li:hover a {
     color: #62c9cf;
 }
-#menu a {
+#sidebar a {
     color: #eee;
 }
 main {
@@ -136,7 +136,7 @@ aside {
     font-size: 12px;
     font-family: 'Museosanscyrl500',Arial, sans-serif;
 }
-aside section{
+aside section {
     font-size: 12px;
 }
 aside .search-box {
@@ -151,7 +151,6 @@ aside .search-box h2 {
 }
 .search-box input {
     float: left;
-    width: 219px;
     height: 17px;
     font-size: 10px;
     border: 1px solid #707074;
@@ -161,22 +160,77 @@ aside .search-box h2 {
     border-radius: 9px;
     box-sizing: content-box;padding-left: 9px;
 }
-.search-box input:focus {
-    padding-left: 9px;
-    width: 219px;
+#content-background {
+    float: left;
+    width: 82%;
+    border-radius: 9px;
+    margin: 10px auto;
+    padding-left: 7px;
 }
-aside .search-icon img {
-    margin-left: -22px;
-    margin-bottom: -1px;
+#content-background:focus {
+outline: none
+}
+#font-family-form {
+    float: left;
+    clear: left;
+}
+#font-family-form label {
+    line-height: 18px;
+    margin-left: 5px;
+}
+.search-box input[type='number'] {
+    float: none;
+    width: 50%;
+    margin-left: 2%;
+}
+.search-box input[type='radio'] {
+    float: left;
+    clear: both;
+}
+#p-delete-btn {
+    float: left;
+    clear: left;
+    margin: 10px auto;
+    width: 75%;
+    height: 20px;
+    background-color: #62c9cf;
+    border: 1px solid #62c9cf;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    outline: none;
+}
+#p-delete-btn:active {
+    border: 1px solid #707074;
+}
+#p-delete-btn:hover {
+     cursor: pointer;
 }
 aside section {
     font-size: 14px;
+}
+.section-wrapper {
+    float: left;
 }
 aside .sidebar-header {
     background-color: #e2e2e2;
     padding: 16px 20px 14px 20px;
     font-weight: bolder;
     cursor: pointer;
+}
+.sidebar-content {
+    max-height: 0;
+    position: relative;
+    visibility: hidden;
+    opacity:0;
+    overflow: hidden;
+    transition: all 2s;
+}
+.added-sidebar {
+    max-height: 172px;
+    visibility: visible;
+    opacity: 1;
+    overflow: hidden;
 }
 .sidebar-content p {
     margin: 10px 0 10px 20px;
@@ -308,8 +362,39 @@ footer {
     .registration input[type="submit"] {
         width: 14%;
     }
-    #menu li {
-        width: 25%;
+    .bars {
+        display: block;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        color: #e2e2e2;
+    }
+    .bars:hover, .bars:active {
+        color: #62c9cf;
+    }
+    nav ul {
+        max-height: 0;
+        position: relative;
+        visibility: hidden;
+        opacity:0;
+        overflow: hidden;
+    }
+    .added {
+        max-height: 144px;
+        visibility: visible;
+        opacity:1;
+        overflow: hidden;
+        -webkit-transition: all 1s;
+        -moz-transition: all 1s;
+        -o-transition: all 1s;
+        transition: all 1s;
+    }
+    #sidebar li {
+        width: 100%;
+        padding: 10px 0;
+        font-size: 11px;
+        text-align: center;
     }
     .main-content-wrapper {
         width: 100%;
@@ -317,10 +402,6 @@ footer {
     aside {
         width: 25%;
     }
-    .search-box input{
-        width: 90%;
-    }
-
     .footer-container {
         width: 100%;
     }
@@ -337,17 +418,6 @@ footer {
         width: 100%;
         margin-top: 5px;
     }
-    .bars {
-        display: block;
-        width: 40px;
-        height: 40px;
-        line-height: 40px;
-        text-align: center;
-        color: #e2e2e2;
-    }
-    .bars:hover, .bars:active {
-        color: #62c9cf;
-    }
     .menu-wrapper nav {
         float: left;
         width: 100%;
@@ -361,10 +431,35 @@ footer {
     .registration input[type="submit"] {
         width: 14%;
     }
-    nav ul {
-        display: none;
+    .bars {
+        display: block;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        color: #e2e2e2;
     }
-    #menu li {
+    .bars:hover, .bars:active {
+        color: #62c9cf;
+    }
+    nav ul {
+        max-height: 0;
+        position: relative;
+        visibility: hidden;
+        opacity:0;
+        overflow: hidden;
+    }
+    .added{
+        max-height: 144px;
+        visibility: visible;
+        opacity:1;
+        overflow: hidden;
+        -webkit-transition: all 1s;
+        -moz-transition: all 1s;
+        -o-transition: all 1s;
+        transition: all 1s;
+    }
+    #sidebar li {
         width: 100%;
         padding: 10px 0;
         font-size: 11px;
@@ -376,8 +471,12 @@ footer {
     aside {
         width: 25%;
     }
-    .search-box input  {
-        width: 90%;
+    #font-family-form label {
+        font-size: 10px;
+        margin-left: 4px;
+    }
+    #p-delete-btn {
+    font-size: 12px;
     }
     .sidebar-header {
         font-size: 11px;

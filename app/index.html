@@ -23,11 +23,11 @@
                     <input type="submit" value="Sign Up" id="sign-up">
                     <input type="submit" value="Sign In" id="sign-in">
                 </div>
-                <div class="bars">
+                <div class="bars" id="burger">
                     <i class="fa fa-bars" aria-hidden="true"></i>
                 </div>
                 <nav>
-                    <ul id="menu">
+                    <ul id="sidebar">
                         <li><a href="#">Home</a></li>
                         <li><a href="#">Blog</a></li>
                         <li><a href="#">About Us</a></li>
@@ -38,16 +38,36 @@
         </div>
     </header>
     <main>
-        <div class="main-content-wrapper">
+        <div class="main-content-wrapper clearfix">
             <aside>
                 <div class="search-box">
-                    <h2>Search item</h2>
-                    <input type="search" id="search" placeholder="Search">
+                    <label for="font-size-p">Font size:</label>
+                    <input type="number" id="font-size-p" min="8" max="24" value="12" placeholder="p font size"> <br>
+                    <select name="content-background" id="content-background">
+                        <option value="#fff" class="option-bckg">white</option>
+                        <option value="#eee" class="option-bckg">grey</option>
+                        <option value="#a1f2f7" class="option-bckg">light-blue</option>
+                        <option value="#faebd7" class="option-bckg">antiquewhite</option>
+                        <option value="#d8bfd8" class="option-bckg">thistle</option>
+                        <option value="#d8c1bf" class="option-bckg">sth</option>
+                        <option value="#5f9ea0" class="option-bckg">cadetblue</option>
+                        <option value="#8a8e8e" class="option-bckg">darkgrey</option>
+                    </select>
+
+                    <form id="font-family-form">
+                        <input type="radio" name="fontType" id="font-type1" value="DancingScript-Regular">
+                        <label for="font-type1">DancingScript</label>
+                        <input type="radio" name="fontType" id="font-type2" value="daniel">
+                        <label for="font-type2">daniel</label>
+                        <input type="radio" name="fontType" id="font-type3" value="Museosanscyrl500">
+                        <label for="font-type3">Museosanscyrl</label>
+                    </form>
+                    <button type="button" id="p-delete-btn">Delete last p</button>
                 </div>
                 <div class="section-wrapper">
                     <section class="diamond ladies">
                         <div class="sidebar-header">Ladie's Diamond Rings</div>
-                        <div class="sidebar-content">
+                        <div class="sidebar-content added-sidebar">
                             <p>Diamond Aniversary Band</p>
                             <p>Diamond Engagement & Wedding Band</p>
                             <p>Diamond Engagement Ring</p>
@@ -59,13 +79,13 @@
                     </section>
                     <section class="diamond bracelets">
                         <div class="sidebar-header">Diamond Bracelets</div>
-                        <div class="sidebar-content">
+                        <div class="sidebar-content added-sidebar">
                             <p>Diamond Tennis Bracelets</p>
                         </div>
                     </section>
                     <section class="diamond earrings">
                         <div class="sidebar-header">Diamond Earrings</div>
-                        <div class="sidebar-content">
+                        <div class="sidebar-content added-sidebar">
                             <p>Diamond Drop Earrings</p>
                             <p>Diamond Hoop & Huggie Earrings</p>
                             <p>Round Cut Diamond Stud</p>
@@ -74,7 +94,7 @@
                     </section>
                     <section class="diamond necklaces">
                         <div class="sidebar-header">Diamond Necklaces</div>
-                        <div class="sidebar-content">
+                        <div class="sidebar-content added-sidebar">
                             <p>Diamond & Color Stone Pendant</p>
                             <p>Diamond Necklaces</p>
                         </div>
@@ -90,11 +110,13 @@
                         <div class="img-container fashion">
                         </div>
                         <div class="text-container">
-                            <div>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-                                has been the industry's standard dummy text ever since the 1500s, when an unknown
-                                printer took a galley of type and scrambled it to make a type specimen book. It has
-                                survived not only five centuries, but also the leap into electronic typesetting,
-                                remaining essentially unchanged.
+                            <div>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                                    has been the industry's standard dummy text ever since the 1500s, when an unknown
+                                    printer took a galley of type and scrambled it to make a type specimen book. It has
+                                    survived not only five centuries, but also the leap into electronic typesetting,
+                                    remaining essentially unchanged.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -102,13 +124,15 @@
                         <div class="img-container woman">
                         </div>
                         <div class="text-container">
-                            <div>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-                                has been the industry's standard dummy text ever since the 1500s, when an unknown
-                                printer took a galley of type and scrambled it to make a type specimen book. It has
-                                survived not only five centuries, but also the leap into electronic typesetting,
-                                remaining essentially unchanged. It was popularised in the 1960s with the release of
-                                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
-                                publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                            <div>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                                    has been the industry's standard dummy text ever since the 1500s, when an unknown
+                                    printer took a galley of type and scrambled it to make a type specimen book. It has
+                                    survived not only five centuries, but also the leap into electronic typesetting,
+                                    remaining essentially unchanged. It was popularised in the 1960s with the release of
+                                    Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
+                                    publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                                </p>
                             </div>
                     </div>
                 </div>
